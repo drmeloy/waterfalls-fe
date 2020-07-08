@@ -3,10 +3,10 @@ const API_URL = 'http://localhost:8000/api/waterfalls/';
 
 export const getWaterfalls = () => axios.get(API_URL).then(res => res.data);
 
-export const getWaterfall = id => axios.get(`${API_URL}/${id}`).then(res => res.data);
+export const getWaterfall = id => axios.get(`${API_URL}${id}/`).then(res => res.data);
 
 export const createWaterfall = waterfall => axios.post(API_URL, waterfall);
 
-export const updateWaterfall = waterfall => axios.put(`${API_URL}/${waterfall.pk}`, waterfall);
+export const updateWaterfall = waterfall => axios.put(`${API_URL}${waterfall.id}/`, waterfall);
 
-export const deleteWaterfall = id => axios.delete(`${API_URL}${id}`);
+export const deleteWaterfall = id => axios.delete(`${API_URL}${id}/`);

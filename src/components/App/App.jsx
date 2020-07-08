@@ -15,19 +15,15 @@ const BaseLayout = () => (
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div  className="navbar-nav">
           <a className="nav-item nav-link" href="/">Waterfalls</a>
-          <a className="nav-item nav-link" href="/customer">Create new waterfall</a>
+          <a className="nav-item nav-link" href="/waterfalls/">Create new waterfall</a>
         </div>
       </div>
     </nav>
 
-    <div>
-      MAP GOES HERE
-    </div>
-
     <div className="content">
       <Route path="/" exact component={WaterfallsList}  />
-      <Route path="/customer/:pk" component={WaterfallCreateUpdate}  />
-      <Route path="/customer/" exact component={WaterfallCreateUpdate}  />
+      <Route path="/waterfalls/:id" component={WaterfallCreateUpdate}  />
+      <Route path="/waterfalls/" exact component={WaterfallCreateUpdate}  />
     </div>
 
   </div>
