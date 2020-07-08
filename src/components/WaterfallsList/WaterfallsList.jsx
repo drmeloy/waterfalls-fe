@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import { getWaterfalls, deleteWaterfall } from '../../services/waterfallsApi';
+import WaterfallCreateUpdate from '../WaterfallCreateUpdate/WaterfallCreateUpdate';
 
 export default function WaterfallsList(){
   const [waterfalls, setWaterfalls] = useState([]);
@@ -23,7 +25,7 @@ export default function WaterfallsList(){
       <td>{waterfall.latitude}</td>
       <td>{waterfall.description}</td>
       <td>
-        <a className="mr-2" href={'/waterfalls/' + waterfall.id}>Update</a>
+        <Route path="/customer/:pk" component={WaterfallCreateUpdate}>Update</Route>
         <button className="btn btn-danger" onClick={() => handleDelete(waterfall.id)}>Delete</button>
       </td>
     </tr>);
