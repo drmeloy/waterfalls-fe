@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WaterfallCreateUpdate component matches snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label>
+      Name (required):
+    </label>
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Height (required):
+    </label>
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Longitude (required):
+    </label>
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Latitude (required):
+    </label>
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Description (optional):
+    </label>
+    <textarea
+      className="form-control"
+      onChange={[Function]}
+      value=""
+    />
+    <input
+      className="btn btn-primary"
+      type="submit"
+      value="Submit"
+    />
+  </div>
+</form>
+`;
