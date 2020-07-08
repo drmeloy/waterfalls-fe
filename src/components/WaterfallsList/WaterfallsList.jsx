@@ -15,21 +15,22 @@ export default function WaterfallsList(){
       setWaterfalls(updatedWaterfallsList);
     });
 
-  const waterfallsTable = waterfalls.map(waterfall =>
-    <tr key={waterfall.id}>
-      <td>{waterfall.id}</td>
-      <td>{waterfall.name}</td>
-      <td>{waterfall.height}</td>
-      <td>{waterfall.longitude}</td>
-      <td>{waterfall.latitude}</td>
-      <td>{waterfall.description}</td>
-      <td>
-        <Link to={`/waterfalls/${waterfall.id}`}>
+  const waterfallsTable = waterfalls
+    .sort((a, b) => a.id < b.id)
+    .map(waterfall =>
+      <tr key={waterfall.id}>
+        <td>{waterfall.name}</td>
+        <td>{waterfall.height}</td>
+        <td>{waterfall.longitude}</td>
+        <td>{waterfall.latitude}</td>
+        <td>{waterfall.description}</td>
+        <td>
+          <Link to={`/waterfalls/${waterfall.id}`}>
           Update
-        </Link>
-        <button className="btn btn-danger" onClick={() => handleDelete(waterfall.id)}>Delete</button>
-      </td>
-    </tr>);
+          </Link>
+          <button className="btn btn-danger" onClick={() => handleDelete(waterfall.id)}>Delete</button>
+        </td>
+      </tr>);
 
   return (
     <>
@@ -40,7 +41,6 @@ export default function WaterfallsList(){
         <table className="table">
           <thead key="thead">
             <tr>
-              <th>#</th>
               <th>Name</th>
               <th>Height</th>
               <th>Longitude</th>
