@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { createWaterfall, updateWaterfall, getWaterfall } from '../../services/waterfallsApi';
 
 export default function WaterfallCreateUpdate({ match: { params } }){
@@ -76,3 +77,11 @@ export default function WaterfallCreateUpdate({ match: { params } }){
     </form>
   ); 
 }
+
+WaterfallCreateUpdate.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.number.isRequired
+    })
+  })
+};
