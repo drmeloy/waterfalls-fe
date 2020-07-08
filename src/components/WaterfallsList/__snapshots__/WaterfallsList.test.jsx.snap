@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WaterfallsList component matches snapshot 1`] = `
+<Fragment>
+  <div>
+    MAP GOES HERE
+  </div>
+  <div
+    className="waterfalls--list"
+  >
+    <table
+      className="table"
+    >
+      <thead
+        key="thead"
+      >
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Height
+          </th>
+          <th>
+            Longitude
+          </th>
+          <th>
+            Latitude
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</Fragment>
+`;
