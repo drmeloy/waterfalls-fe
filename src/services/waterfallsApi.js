@@ -3,7 +3,7 @@ const API_URL = 'http://localhost:8000/api/waterfalls/';
 
 export const getWaterfalls = () => axios.get(API_URL).then(res => res.data);
 
-export const getWaterfall = pk => axios.get(`${API_URL}/${pk}`).then(res => res.data);
+export const getWaterfall = id => axios.get(`${API_URL}/${id}`).then(res => res.data);
 
 export const createWaterfall = waterfall => axios.post(API_URL, waterfall);
 
