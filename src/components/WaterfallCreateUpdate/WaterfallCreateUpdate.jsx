@@ -63,11 +63,11 @@ export default function WaterfallCreateUpdate({ match: { params } }){
         <label>Height (required):</label>
         <input className="form-control" type="text" value={height} onChange={(({ target }) => setHeight(target.value))} />
 
-        <label>Longitude (required):</label>
-        <input className="form-control" type="text" value={longitude} onChange={(({ target }) => setLongitude(target.value))} />
-
         <label>Latitude (required):</label>
         <input className="form-control" type="text" value={latitude} onChange={(({ target }) => setLatitude(target.value))} />
+        
+        <label>Longitude (required):</label>
+        <input className="form-control" type="text" value={longitude} onChange={(({ target }) => setLongitude(target.value))} />
 
         <label>Description (optional):</label>
         <textarea className="form-control" value={description} onChange={(({ target }) => setDescription(target.value))} />
