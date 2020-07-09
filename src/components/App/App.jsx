@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import WaterfallCreateUpdate from '../WaterfallCreateUpdate/WaterfallCreateUpdate';
 import WaterfallsList from '../WaterfallsList/WaterfallsList';

@@ -20,7 +20,7 @@ export default function LeafletMap({ waterfalls }){
   ));
 
   return (
-    <Map center={[44.1, -120.6]} zoom={7} style={{ height: '600px', width: '100vw' }}>
+    <Map center={[44.1, -120.6]} zoom={7} style={{ height: '600px', width: '90vw', margin: '7% auto', 'margin-bottom': '2%' }}>
       {markers}
       {activeWaterfall && (
         <Popup
