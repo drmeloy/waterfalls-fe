@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getWaterfalls, deleteWaterfall } from '../../services/waterfallsApi';
 import { Link } from 'react-router-dom';
+import LeafletMap from '../LeafletMap/LeafletMap';
 
 export default function WaterfallsList(){
   const [waterfalls, setWaterfalls] = useState([]);
@@ -34,9 +35,7 @@ export default function WaterfallsList(){
 
   return (
     <>
-      <div>
-        MAP GOES HERE
-      </div>
+      <LeafletMap waterfalls={waterfalls} />
       <div className="waterfalls--list">
         <table className="table">
           <thead key="thead">
