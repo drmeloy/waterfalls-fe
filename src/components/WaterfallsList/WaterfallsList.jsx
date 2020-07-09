@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getWaterfalls, deleteWaterfall } from '../../services/waterfallsApi';
 import { Link } from 'react-router-dom';
+import LeafletMap from '../LeafletMap/LeafletMap';
 
 export default function WaterfallsList(){
   const [waterfalls, setWaterfalls] = useState([]);
@@ -21,11 +22,11 @@ export default function WaterfallsList(){
       <tr key={waterfall.id}>
         <td>{waterfall.name}</td>
         <td>{waterfall.height}</td>
-        <td>{waterfall.longitude}</td>
         <td>{waterfall.latitude}</td>
+        <td>{waterfall.longitude}</td>
         <td>{waterfall.description}</td>
         <td>
-          <Link to={`/waterfalls/${waterfall.id}`}>
+          <Link to={`/waterfalls/${waterfall.id}/${waterfall.name}/`}>
           Update
           </Link>
           <button className="btn btn-danger" onClick={() => handleDelete(waterfall.id)}>Delete</button>
@@ -34,17 +35,15 @@ export default function WaterfallsList(){
 
   return (
     <>
-      <div>
-        MAP GOES HERE
-      </div>
+      <LeafletMap waterfalls={waterfalls} />
       <div className="waterfalls--list">
         <table className="table">
           <thead key="thead">
             <tr>
               <th>Name</th>
               <th>Height</th>
-              <th>Longitude</th>
               <th>Latitude</th>
+              <th>Longitude</th>
               <th>Description</th>
               <th>Actions</th>
             </tr>
