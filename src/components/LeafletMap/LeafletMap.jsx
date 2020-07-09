@@ -29,6 +29,7 @@ export default function LeafletMap({ waterfalls }){
           <div>
             <h6>{activeWaterfall.name}</h6>
             <p>{activeWaterfall.description}</p>
+            <span>Height: {activeWaterfall.height}</span><br/>
             <span>Latitude: {activeWaterfall.latitude}</span><br/>
             <span>Longitude: {activeWaterfall.longitude}</span>
           </div>
