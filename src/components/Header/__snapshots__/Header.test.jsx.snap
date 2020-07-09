@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component matches snapshot 1`] = `
+<Navbar
+  bg="primary"
+  className="justify-content-between align-middle border border-dark"
+  collapseOnSelect={false}
+  expand="sm"
+  fixed="top"
+  variant="dark"
+>
+  <NavbarBrand
+    href="/"
+    style={
+      Object {
+        "fontSize": "1.5em",
+      }
+    }
+  >
+    Waterfalls of Oregon!
+  </NavbarBrand>
+  <Nav
+    fill={false}
+    justify={false}
+  >
+    <NavItem>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        href="/waterfalls/"
+        style={
+          Object {
+            "transition": ".3s",
+          }
+        }
+      >
+        Create new waterfall
+      </NavLink>
+    </NavItem>
+  </Nav>
+</Navbar>
+`;

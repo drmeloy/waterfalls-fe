@@ -1,61 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WaterfallCreateUpdate component matches snapshot 1`] = `
-<form
+<Form
+  className="mt-5 p-3"
+  inline={false}
   onSubmit={[Function]}
 >
-  <div
-    className="form-group"
+  <FormGroup
+    controlId="name"
   >
-    <label>
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
       Name (required):
-    </label>
-    <input
-      className="form-control"
+    </FormLabel>
+    <FormControl
       onChange={[Function]}
+      required={true}
       type="text"
       value=""
     />
-    <label>
+  </FormGroup>
+  <FormGroup
+    controlId="height"
+  >
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
       Height (required):
-    </label>
-    <input
-      className="form-control"
+    </FormLabel>
+    <FormControl
       onChange={[Function]}
+      required={true}
       type="text"
       value=""
     />
-    <label>
-      Longitude (required):
-    </label>
-    <input
-      className="form-control"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
+  </FormGroup>
+  <FormGroup
+    controlId="latitude"
+  >
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
       Latitude (required):
-    </label>
-    <input
-      className="form-control"
+    </FormLabel>
+    <FormControl
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <FormText
+      className="text-muted"
+    >
+      Please include only the numbers and negative and period symbols, not the cardinal direction indicators. For example, 45.2987 S is written -45.2987.
+    </FormText>
+  </FormGroup>
+  <FormGroup
+    controlId="longitude"
+  >
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
+      Longitude (required):
+    </FormLabel>
+    <FormControl
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <FormText
+      className="text-muted"
+    >
+      Please include only the numbers and negative and period symbols, not the cardinal direction indicators. For example, 122.8624 W is written -122.8624.
+    </FormText>
+  </FormGroup>
+  <FormGroup
+    controlId="description"
+  >
+    <FormLabel
+      column={false}
+      srOnly={false}
+    >
+      Description (optional):
+    </FormLabel>
+    <FormControl
+      as="textarea"
       onChange={[Function]}
       type="text"
       value=""
     />
-    <label>
-      Description (optional):
-    </label>
-    <textarea
-      className="form-control"
-      onChange={[Function]}
-      value=""
-    />
-    <input
-      className="btn btn-primary"
-      type="submit"
-      value="Submit"
-    />
-  </div>
-</form>
+  </FormGroup>
+  <Button
+    active={false}
+    disabled={false}
+    type="submit"
+    variant="primary"
+  >
+    Submit
+  </Button>
+</Form>
 `;
