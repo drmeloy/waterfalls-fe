@@ -1,12 +1,13 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import WaterfallCreateUpdate from '../WaterfallCreateUpdate/WaterfallCreateUpdate';
 import WaterfallsList from '../WaterfallsList/WaterfallsList';
-import NavBar from '../NavBar/NavBar';
+import Header from '../Header/Header';
 
 const BaseLayout = () => (
   <div className="container-fluid">
-    <NavBar />
+    <Header />
     <div className="content">
       <Route path="/" exact component={WaterfallsList}  />
       <Route path="/waterfalls/:id" component={WaterfallCreateUpdate}  />

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { getWaterfalls, deleteWaterfall } from '../../services/waterfallsApi';
 import { Link } from 'react-router-dom';
 import LeafletMap from '../LeafletMap/LeafletMap';
+import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 export default function WaterfallsList(){
   const [waterfalls, setWaterfalls] = useState([]);
@@ -26,10 +28,14 @@ export default function WaterfallsList(){
         <td>{waterfall.longitude}</td>
         <td>{waterfall.description}</td>
         <td>
-          <Link to={`/waterfalls/${waterfall.id}/${waterfall.name}/`}>
-          Update
+          <Link to={`/waterfalls/${waterfall.id}/${waterfall.name}/`} style={{ textDecoration: 'none' }}>
+            <Button variant='outline-secondary' className='mb-3' block>
+              Update
+            </Button>
           </Link>
-          <button className="btn btn-danger" onClick={() => handleDelete(waterfall.id)}>Delete</button>
+          <Button variant='outline-danger' onClick={() => handleDelete(waterfall.id)} block>
+            Delete
+          </Button>
         </td>
       </tr>);
 
@@ -37,7 +43,7 @@ export default function WaterfallsList(){
     <>
       <LeafletMap waterfalls={waterfalls} />
       <div className="waterfalls--list">
-        <table className="table">
+        <Table size='small' className='mx-auto'>
           <thead key="thead">
             <tr>
               <th>Name</th>
@@ -51,7 +57,7 @@ export default function WaterfallsList(){
           <tbody>
             {waterfallsTable}
           </tbody>
-        </table>
+        </Table>
       </div>
     </>
   );

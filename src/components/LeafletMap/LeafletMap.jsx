@@ -19,8 +19,16 @@ export default function LeafletMap({ waterfalls }){
       icon={icon} />
   ));
 
+  const mapStyles = {
+    'height': '600px',
+    'width': '90vw',
+    'margin': '7% auto',
+    'margin-bottom': '2%',
+    'border': '1px solid'
+  };
+
   return (
-    <Map center={[44.1, -120.6]} zoom={7} style={{ height: '600px', width: '100vw' }}>
+    <Map center={[44.1, -120.6]} zoom={7} style={mapStyles}>
       {markers}
       {activeWaterfall && (
         <Popup
