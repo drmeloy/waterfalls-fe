@@ -23,7 +23,7 @@ export default function LeafletMap({ waterfalls }){
     'height': '600px',
     'width': '90vw',
     'margin': '7% auto',
-    'margin-bottom': '2%',
+    'marginBottom': '2%',
     'border': '1px solid'
   };
 

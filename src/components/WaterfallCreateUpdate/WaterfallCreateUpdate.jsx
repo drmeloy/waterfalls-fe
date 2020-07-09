@@ -52,7 +52,8 @@ export default function WaterfallCreateUpdate({ match: { params } }){
 
   const handleSubmit = () => {
     event.preventDefault();
-    if(pk) handleUpdate(pk);
+    if(/[a-zA-z]/.test(longitude) || /[a-zA-z]/.test(latitude)) alert('Latitude and longitude cannot include letters. Please refer to coordinates as either positive or negative numbers (coordinates will be negative if South or West)');
+    else if(pk) handleUpdate(pk);
     else handleCreate();
   };
 
@@ -60,29 +61,49 @@ export default function WaterfallCreateUpdate({ match: { params } }){
     <Form onSubmit={handleSubmit} className='mt-5 p-3'>
       <Form.Group controlId='name'>
         <Form.Label>Name (required):</Form.Label>
-        <Form.Control type='text' value={name} onChange={({ target }) => setName(target.value)} />
+        <Form.Control 
+          required
+          type='text' 
+          value={name} 
+          onChange={({ target }) => setName(target.value)} />
       </Form.Group>
       <Form.Group controlId='height'>
         <Form.Label>Height (required):</Form.Label>
-        <Form.Control type='text' value={height} onChange={({ target }) => setHeight(target.value)} />
+        <Form.Control 
+          required
+          type='text' 
+          value={height} 
+          onChange={({ target }) => setHeight(target.value)} />
       </Form.Group>
       <Form.Group controlId='latitude'>
         <Form.Label>Latitude (required):</Form.Label>
-        <Form.Control type='text' value={latitude} onChange={(({ target }) => setLatitude(target.value))} />
+        <Form.Control 
+          required
+          type='text' 
+          value={latitude} 
+          onChange={(({ target }) => setLatitude(target.value))} />
         <Form.Text className='text-muted'>
           Please include only the numbers and negative and period symbols, not the cardinal direction indicators. For example, 45.2987 S is written -45.2987.
         </Form.Text>
       </Form.Group>
       <Form.Group controlId='longitude'>
         <Form.Label>Longitude (required):</Form.Label>
-        <Form.Control type='text' value={longitude} onChange={(({ target }) => setLongitude(target.value))} />
+        <Form.Control 
+          required
+          type='text' 
+          value={longitude} 
+          onChange={(({ target }) => setLongitude(target.value))} />
         <Form.Text className='text-muted'>
           Please include only the numbers and negative and period symbols, not the cardinal direction indicators. For example, 122.8624 W is written -122.8624.
         </Form.Text>
       </Form.Group>
       <Form.Group controlId='description'>
         <Form.Label>Description (optional):</Form.Label>
-        <Form.Control type='text' as='textarea' value={description} onChange={(({ target }) => setDescription(target.value))} />
+        <Form.Control 
+          type='text' 
+          as='textarea' 
+          value={description} 
+          onChange={(({ target }) => setDescription(target.value))} />
       </Form.Group>
       <Button variant='primary' type='submit'>
         Submit
