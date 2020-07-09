@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
@@ -7,7 +8,7 @@ export default function LeafletMap({ waterfalls }){
 
   const icon = new Icon({
     iconUrl: '../../public/assets/waterfall-icon.png',
-    iconSize: [40, 40]
+    iconSize: [35, 35]
   });
 
   const markers = waterfalls.map(waterfall => (
@@ -17,10 +18,9 @@ export default function LeafletMap({ waterfalls }){
       onClick={() => setActiveWaterfall(waterfall)}
       icon={icon} />
   ));
-    
 
   return (
-    <Map center={[43.8, -120.6]} zoom={7} style={{ height: '500px', width: '50vw' }}>
+    <Map center={[44.1, -120.6]} zoom={7} style={{ height: '600px', width: '100vw' }}>
       {markers}
       {activeWaterfall && (
         <Popup
@@ -40,6 +40,12 @@ export default function LeafletMap({ waterfalls }){
   );
 }
 
-// 45.5051° N, 122.6750° W Portland
-// 44.0582° N, 121.3153° W Bend
-
+LeafletMap.propTypes = {
+  waterfalls: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    latitude: PropTypes.string.isRequired,
+    longitude: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+  }))
+};
