@@ -2,14 +2,15 @@
 
 exports[`WaterfallsList component matches snapshot 1`] = `
 <Fragment>
-  <div>
-    MAP GOES HERE
-  </div>
+  <LeafletMap
+    waterfalls={Array []}
+  />
   <div
     className="waterfalls--list"
   >
-    <table
-      className="table"
+    <ForwardRef
+      className="mx-auto"
+      size="small"
     >
       <thead
         key="thead"
@@ -22,10 +23,10 @@ exports[`WaterfallsList component matches snapshot 1`] = `
             Height
           </th>
           <th>
-            Longitude
+            Latitude
           </th>
           <th>
-            Latitude
+            Longitude
           </th>
           <th>
             Description
@@ -36,7 +37,7 @@ exports[`WaterfallsList component matches snapshot 1`] = `
         </tr>
       </thead>
       <tbody />
-    </table>
+    </ForwardRef>
   </div>
 </Fragment>
 `;
