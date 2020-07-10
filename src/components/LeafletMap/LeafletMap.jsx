@@ -4,6 +4,8 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
 export default function LeafletMap({ waterfalls }){
+  console.log(waterfalls);
+  
   const [activeWaterfall, setActiveWaterfall] = useState(null);
 
   const icon = new Icon({
