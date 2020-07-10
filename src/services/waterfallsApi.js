@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'http://ec2-3-23-64-119.us-east-2.compute.amazonaws.com:8000/api/waterfalls/';
+const API_URL = 'https://ec2-3-23-64-119.us-east-2.compute.amazonaws.com:8000/api/waterfalls/';
 
 export const getWaterfalls = () => axios.get(API_URL).then(res => res.data.sort((a, b) => a.id - b.id));
 
