@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "engines": {
+    "node": "14.4.0",
+    "npm": "6.14.5"
+  },
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>src/setupTests.js"
@@ -19,7 +23,7 @@
     "test": "jest --verbose",
     "tw": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
-    "build": "webpack -p --devtool source-map",
+    "build": "webpack --mode production",
     "heroku-prebuild": "npm install --dev"
   },
   "keywords": [],

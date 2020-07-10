@@ -10,8 +10,8 @@ const BaseLayout = () => (
     <Header />
     <div className="content">
       <Route path="/" exact component={WaterfallsList}  />
-      <Route path="/waterfall/:id" component={WaterfallCreateUpdate}  />
       <Route path="/waterfall/" exact component={WaterfallCreateUpdate}  />
+      <Route path="/waterfall/:id" component={WaterfallCreateUpdate}  />
     </div>
   </div>
 );
