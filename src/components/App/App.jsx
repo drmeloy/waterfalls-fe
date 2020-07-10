@@ -9,16 +9,16 @@ const BaseLayout = () => (
   <div className="container-fluid">
     <Header />
     <div className="content">
-      <Route path="https://drmeloy.github.io/waterfalls-fe/" exact component={WaterfallsList}  />
-      <Route path="https://drmeloy.github.io/waterfalls-fe/waterfalls/:id" component={WaterfallCreateUpdate}  />
-      <Route path="https://drmeloy.github.io/waterfalls-fe/waterfalls/" exact component={WaterfallCreateUpdate}  />
+      <Route path="/" exact component={WaterfallsList}  />
+      <Route path="/waterfall/:id" component={WaterfallCreateUpdate}  />
+      <Route path="/waterfall/" exact component={WaterfallCreateUpdate}  />
     </div>
   </div>
 );
 
 export default function App() {
   return (
-    <BrowserRouter basename='https://drmeloy.github.io/waterfalls-fe'>
+    <BrowserRouter>
       <BaseLayout />
     </BrowserRouter>
   );

@@ -28,7 +28,7 @@ export default function WaterfallsList(){
         <td>{waterfall.longitude}</td>
         <td>{waterfall.description}</td>
         <td>
-          <Link to={`/waterfalls/${waterfall.id}/${waterfall.name}/`} style={{ textDecoration: 'none' }}>
+          <Link to={`/waterfall/${waterfall.id}/${waterfall.name}/`} style={{ textDecoration: 'none' }}>
             <Button variant='outline-secondary' className='mb-3' block>
               Update
             </Button>

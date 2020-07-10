@@ -8,7 +8,7 @@ export default function Header(){
       <NavBar.Brand href="/" style={{ 'fontSize': '1.5em' }}>Waterfalls of Oregon!</NavBar.Brand>
       <Nav>
         <Nav.Item>
-          <Nav.Link href="/waterfalls/" style={{ 'transition': '.3s' }}>Create new waterfall</Nav.Link>
+          <Nav.Link href="/waterfall/" style={{ 'transition': '.3s' }}>Create new waterfall</Nav.Link>
         </Nav.Item>
       </Nav>       
     </NavBar>
