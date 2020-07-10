@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "homepage": "https://drmeloy.github.io/waterfalls-fe",
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>src/setupTests.js"
