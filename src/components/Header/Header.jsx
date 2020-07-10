@@ -8,7 +8,9 @@ export default function Header(){
     <NavBar bg='primary' expand='sm' variant='dark' fixed='top' className='justify-content-between align-middle border border-dark'>
       <NavBar.Brand href="/" style={{ 'fontSize': '1.5em' }}>Waterfalls of Oregon!</NavBar.Brand>
       <Nav style={{ 'transition': '.3s' }}>
-        <Link to='/waterfall/'>Create new waterfall</Link>
+        <Nav.Item>
+          <Link to='/waterfall/'>Create new waterfall</Link>
+        </Nav.Item>
       </Nav>       
     </NavBar>
   );
