@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
+import waterfallIcon from '../../../public/assets/waterfall-icon.png';
 
 export default function LeafletMap({ waterfalls }){
-  console.log(waterfalls);
-  
   const [activeWaterfall, setActiveWaterfall] = useState(null);
 
   const icon = new Icon({
-    iconUrl: '../../public/assets/waterfall-icon.png',
+    iconUrl: waterfallIcon,
     iconSize: [35, 35]
   });
 
