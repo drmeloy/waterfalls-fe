@@ -18,7 +18,7 @@ const BaseLayout = () => (
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='https://drmeloy.github.io/waterfalls-fe'>
       <BaseLayout />
     </BrowserRouter>
   );
