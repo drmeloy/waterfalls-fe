@@ -9,9 +9,9 @@ const BaseLayout = () => (
   <div className="container-fluid">
     <Header />
     <div className="content">
-      <Route path="/" exact component={WaterfallsList}  />
-      <Route path="/waterfalls/:id" component={WaterfallCreateUpdate}  />
-      <Route path="/waterfalls/" exact component={WaterfallCreateUpdate}  />
+      <Route path="https://drmeloy.github.io/waterfalls-fe/" exact component={WaterfallsList}  />
+      <Route path="https://drmeloy.github.io/waterfalls-fe/waterfalls/:id" component={WaterfallCreateUpdate}  />
+      <Route path="https://drmeloy.github.io/waterfalls-fe/waterfalls/" exact component={WaterfallCreateUpdate}  />
     </div>
   </div>
 );
