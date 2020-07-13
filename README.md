@@ -11,7 +11,7 @@ The front end is built with:
 The back end is built with:
 - Django (Python)
 
-The back end is hosted on a Window's provisioned AWS EC2 instance, with the database being ran on an AWS RDS PostgreSQL instance. [Click here to view the backend repository.](https://github.com/drmeloy/waterfalls)
+The back end is hosted on a Window's provisioned AWS EC2 instance, with the database being ran on an AWS RDS PostgreSQL instance. [Click here to view the back end repository.](https://github.com/drmeloy/waterfalls)
 
 ### Pages and navigation:
 
